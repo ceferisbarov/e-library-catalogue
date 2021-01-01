@@ -1,3 +1,4 @@
+!--
 <!DOCTYPE html>  
 <html lang="en">  
 <head>  
@@ -7,7 +8,7 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}"/>  
 </head>  
 <body>  
-<form method="POST" class="post-form" action="/item">
+<form method="POST" class="post-form" action="item">
         {% csrf_token %}  
     <div class="container">  
 <br>  
@@ -16,13 +17,7 @@
     <div class="col-sm-4">  
     <h3>Enter Details</h3>  
     </div>  
-  </div>  
-    <div class="form-group row">  
-    <label class="col-sm-2 col-form-label">ID:</label>  
-    <div class="col-sm-4">  
-      {{ form.eid }}  
-    </div>  
-  </div>  
+  </div>
   <div class="form-group row">  
     <label class="col-sm-2 col-form-label">Type:</label>  
     <div class="col-sm-4">  
@@ -41,20 +36,20 @@
       {{ form.eauthor }}  
     </div>  
   </div>  
-  </div>  
     <div class="form-group row">  
     <label class="col-sm-2 col-form-label">Status:</label>  
     <div class="col-sm-4">  
-      {{ form.estatus }}  
+      {{ form.estatus }}
     </div>  
+  </div>  
   </div>  
     <div class="form-group row">  
     <label class="col-sm-1 col-form-label"></label>  
-    <div class="col-sm-4">  
+    <div class="col-sm-4">
     <button type="submit" class="btn btn-primary">Submit</button>  
     </div>  
   </div>  
     </div>  
 </form>  
 </body>  
-</html>  
+</html>

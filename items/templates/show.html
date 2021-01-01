@@ -21,21 +21,21 @@
     <tbody>  
 {% for item in items %}  
     <tr>  
-        <td>{{ items.eid }}</td>  
-        <td>{{ items.etype }}</td>  
-        <td>{{ items.etitle }}</td>  
-        <td>{{ items.eauthor }}</td>  
-        <td>{{ items.estatus }}</td>  
+        <td>{{ item.id }}</td>  
+        <td>{{ item.etype }}</td>  
+        <td>{{ item.etitle }}</td>  
+        <td>{{ item.eauthor }}</td>  
+        <td>{{ item.estatus }}</td>  
         <td>  
-            <a href="/edit/{{ items.id }}"><span class="glyphicon glyphicon-pencil" >Edit</span></a>  
-            <a href="/delete/{{ items.id }}">Delete</a>  
+            <a href="/items/{{item.pk}}/update"><span class="glyphicon glyphicon-pencil" >Edit</span></a>  
+            <a href="/items/delete/{{ item.id }}">Delete</a>  
         </td>  
     </tr>  
-{% endfor %}  
+{% endfor %}
     </tbody>  
 </table>  
 <br>  
 <br>  
-<center><a href="/items/item" class="btn btn-primary">Add New Record</a></center>  
+<center><a href="/items/item" class="btn btn-primary">Add New Record</a></center>
 </body>  
-</html>  
+</html>
