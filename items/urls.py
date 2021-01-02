@@ -1,12 +1,10 @@
 from django.urls import path
 from . import views
-from .views import itemUpdateView
+from .views import itemCreateView, itemUpdateView, itemDeleteView
 
 urlpatterns = [
     path('show', views.show),
-    path('item', views.item),
-#    path('edit/<int:id>', views.edit),
-#    path('update/<int:id>', views.update),
-#    path('delete/<int:id>', views.destroy),
-	path('<pk>/update', itemUpdateView.as_view())
+	path('create', itemCreateView.as_view()),
+	path('<pk>/update', itemUpdateView.as_view()),
+	path('<pk>/delete/', itemDeleteView.as_view()), 
 ]

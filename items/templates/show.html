@@ -28,7 +28,7 @@
         <td>{{ item.estatus }}</td>  
         <td>  
             <a href="/items/{{item.pk}}/update"><span class="glyphicon glyphicon-pencil" >Edit</span></a>  
-            <a href="/items/delete/{{ item.id }}">Delete</a>  
+            <a href="/items/{{item.pk}}/delete">Delete</a>  
         </td>  
     </tr>  
 {% endfor %}
@@ -36,6 +36,6 @@
 </table>  
 <br>  
 <br>  
-<center><a href="/items/item" class="btn btn-primary">Add New Record</a></center>
+<center><a href="/items/create" class="btn btn-primary">Add New Record</a></center>
 </body>  
 </html>
