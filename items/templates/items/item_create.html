@@ -1,10 +1,13 @@
 <form method="POST" enctype="multipart/form-data"> 
   
     <!-- Security token -->
-    {% csrf_token %} 
+    <input type="hidden" name="csrfmiddlewaretoken" value="4y22VyAAoDb04hUVmyB7yxT9eNELpf3jqAEbKY2kYGl3ft8p5eQR13oYT2AkHxzf"> 
   
     <!-- Using the formset -->
-    {{ form.as_p }} 
+    <p><label for="id_etype">Type:</label> <input type="text" name="etype" maxlength="100" required id="id_etype"></p>
+<p><label for="id_etitle">Title:</label> <input type="text" name="etitle" maxlength="100" required id="id_etitle"></p>
+<p><label for="id_eauthor">Author:</label> <input type="text" name="eauthor" maxlength="100" required id="id_eauthor"></p>
+<p><label for="id_estatus">Status:</label> <input type="text" name="estatus" maxlength="20" required id="id_estatus"></p> 
       
     <input type="submit" value="Submit"> 
 </form>

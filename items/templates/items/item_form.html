@@ -1,5 +1,8 @@
 <form method="post">  
-    {% csrf_token %}  
-    {{ form.as_p }}  
+    <input type="hidden" name="csrfmiddlewaretoken" value="2h9wiB3xQQgz4FqbbnbkDDyBhE1w0LRIojLF71vhqTqCfREFU3q4693qWTX5i3nE">  
+    <p><label for="id_etype">Type:</label> <input type="text" name="etype" value="Book" maxlength="100" required id="id_etype"></p>
+<p><label for="id_etitle">Title:</label> <input type="text" name="etitle" value="War and Peace" maxlength="100" required id="id_etitle"></p>
+<p><label for="id_eauthor">Author:</label> <input type="text" name="eauthor" value="Leo Tolstoy" maxlength="100" required id="id_eauthor"></p>
+<p><label for="id_estatus">Status:</label> <input type="text" name="estatus" value="Available" maxlength="20" required id="id_estatus"></p>  
     <input type="submit" value="Save">  
 </form> 
